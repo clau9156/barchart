@@ -10,17 +10,16 @@ const model = [];
 
 function init() {
     console.log("init"); 
-    for (let i = 0; i < 40; i++) {
-        model[i] = getNumberofCustomers();
-      }
     loop();
     displayData();
 }
 // i = measurements
 function loop() {
     console.log("loop");
+    
     for (let i=0; i<40; i++) {
         // i++;
+        model[i] = getNumberofCustomers();
         document.getElementById("bars").getElementsByClassName("bar")[
             i].style.height = model[i] + "%";
     
@@ -45,7 +44,7 @@ function modifyModel() {
     console.log("modifyModel");
     const queueSize = getNumberofCustomers();
     // adds at the end
-    model.push(getNumberofCustomers);
+    model.push();
     // scroll left
-    model.shift(bar);
+    model.shift();
 }
