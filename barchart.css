@@ -1,9 +1,10 @@
 #bars {
   display: flex;
   flex-direction: row;
+  height: 60px;
 }
 
-#bar {
+.bar {
   flex-grow: 1;
   background-color: blueviolet;
   border: 2px solid purple;
