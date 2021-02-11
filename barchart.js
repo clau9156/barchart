@@ -6,18 +6,23 @@ let bars = document.querySelector("#bars");
 
 window.addEventListener("load", init);
 
+const model = [];
+
 function init() {
     console.log("init"); 
+    for (let i = 0; i < 40; i++) {
+        model[i] = getNumberofCustomers();
+      }
     loop();
-    // displayData();
+    displayData();
 }
 // i = measurements
-// if to loop
 function loop() {
     console.log("loop");
-    for (let i=0; i<40;) {
-        i++;
-        bar.style.height = i + "%";
+    for (let i=0; i<40; i++) {
+        // i++;
+        document.getElementById("bars").getElementsByClassName("bar")[
+            i].style.height = model[i] + "%";
     
     }
 }
@@ -31,6 +36,7 @@ function getNumberofCustomers() {
 function displayData() {
     console.log("displayData");
     bars.appendChild(bar);
+    loop();
     modifyModel();
     setTimeout(displayData, 1000);
 }
@@ -39,7 +45,7 @@ function modifyModel() {
     console.log("modifyModel");
     const queueSize = getNumberofCustomers();
     // adds at the end
-    bars.push();
+    model.push(getNumberofCustomers);
     // scroll left
-    bars.shift();
+    model.shift(bar);
 }
