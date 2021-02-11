@@ -10,6 +10,7 @@ const model = [];
 
 function init() {
     console.log("init"); 
+    
     loop();
     displayData();
 }
@@ -42,7 +43,7 @@ function displayData() {
 
 function modifyModel() {
     console.log("modifyModel");
-    const queueSize = getNumberofCustomers();
+    // const queueSize = getNumberofCustomers();
     // adds at the end
     model.push();
     // scroll left
