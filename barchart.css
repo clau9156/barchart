@@ -1,0 +1,13 @@
+#bars {
+  display: flex;
+  flex-direction: row;
+}
+
+#bar {
+  flex-grow: 1;
+  background-color: blueviolet;
+  border: 2px solid purple;
+  /* width: 30px; */
+  margin-right: 1px;
+  height: 100%;
+}
